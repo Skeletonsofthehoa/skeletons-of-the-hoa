@@ -25,23 +25,6 @@
       width: 100%;
     }
 
-    /* Divider bones */
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 24px 0;
-      opacity: 0.2;
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #f0ece0;
-    }
-    .divider span { font-size: 14px; }
-
-    /* Header */
     .header { text-align: center; margin-bottom: 8px; }
 
     .skull-row {
@@ -56,7 +39,6 @@
       font-size: clamp(26px, 7vw, 36px);
       font-weight: 700;
       line-height: 1.15;
-      letter-spacing: -0.5px;
       color: #f0ece0;
     }
 
@@ -72,75 +54,96 @@
       margin-top: 8px;
       font-size: 12px;
       color: #6b6457;
-      letter-spacing: 0.5px;
     }
 
-    /* Links */
-    .links { display: flex; flex-direction: column; gap: 14px; }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 28px 0 20px;
+      opacity: 0.2;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #f0ece0;
+    }
+    .divider span { font-size: 14px; }
+
+    /* Sections */
+    .section { margin-bottom: 28px; }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: #a89f8c;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #222;
+      line-height: 1.4;
+    }
+
+    .links { display: flex; flex-direction: column; gap: 8px; }
 
     .link-card {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: space-between;
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
-      border-radius: 12px;
-      padding: 18px 20px;
+      border-radius: 10px;
+      padding: 14px 16px;
       text-decoration: none;
       color: #f0ece0;
+      font-size: 14px;
+      font-weight: 500;
       transition: background 0.15s, border-color 0.15s, transform 0.1s;
-      cursor: default;
-      position: relative;
     }
 
-    .link-card.live {
-      cursor: pointer;
-    }
-
-    .link-card.live:hover {
+    .link-card:hover {
       background: #222;
       border-color: #3d3d3d;
       transform: translateY(-1px);
     }
 
-    .link-card .emoji {
-      font-size: 22px;
+    .link-card .arrow {
+      font-size: 14px;
+      color: #4a4540;
       flex-shrink: 0;
-      width: 32px;
-      text-align: center;
+      margin-left: 10px;
     }
 
-    .link-card .text { flex: 1; }
-
-    .link-card .label {
+    /* Submit section */
+    .submit-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1a1310;
+      border: 1px solid #3a2e20;
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-decoration: none;
+      color: #f0ece0;
       font-size: 15px;
       font-weight: 500;
-      line-height: 1.3;
+      margin-top: 8px;
+      transition: background 0.15s, transform 0.1s;
     }
 
-    .coming-soon {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: #5a5248;
-      font-weight: 500;
+    .submit-card:hover {
+      background: #221a10;
+      transform: translateY(-1px);
     }
 
-    .arrow {
-      font-size: 16px;
-      color: #3d3d3d;
-      flex-shrink: 0;
-    }
+    .submit-card .emoji { margin-right: 10px; }
+    .submit-card .arrow { color: #6b5a3a; margin-left: 10px; }
 
-    /* Footer */
     .footer {
       text-align: center;
       margin-top: 40px;
       font-size: 11px;
       color: #3d3832;
-      letter-spacing: 0.5px;
     }
   </style>
 </head>
@@ -156,54 +159,97 @@
 
     <div class="divider"><span>⚰️</span></div>
 
-    <div class="links">
-
-      <!-- 1 -->
-      <div class="link-card">
-        <span class="emoji">🦅</span>
-        <div class="text">
-          <div class="label">The Eagle Is Coming</div>
-          <span class="coming-soon">Coming Soon</span>
-        </div>
-        <span class="arrow">→</span>
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-title">💀 Boner's Wishlist — Accessories & More Decor</div>
+      <div class="links">
+        <a class="link-card" href="https://amzn.to/3PT6sfi" target="_blank">4th of July Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4uELrnC" target="_blank">Graduation Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4dHQBJA" target="_blank">Summerween Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4occx35" target="_blank">Santa Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/43GxwBw" target="_blank">Back to School Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4dHQFci" target="_blank">Football Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/439FOSk" target="_blank">Bunny Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4o2GmmI" target="_blank">Christmas Tree Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4uJY6G5" target="_blank">Nightmare Before Christmas Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3PEvX3X" target="_blank">Elf Costume <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4e2ivPt" target="_blank">Turkey Costume <span class="arrow">→</span></a>
       </div>
+    </div>
 
-      <!-- 2 -->
-      <div class="link-card">
-        <span class="emoji">💀</span>
-        <div class="text">
-          <div class="label">Boner's Wishlist</div>
-          <span class="coming-soon">Coming Soon — Amazon Storefront</span>
-        </div>
-        <span class="arrow">→</span>
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-title">🤫 Nobody's Gonna Know — Faux Home & Yard Fixes</div>
+      <div class="links">
+        <a class="link-card" href="https://amzn.to/3Qd7JOo" target="_blank">Lawn Spray Paint <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4dF2q3e" target="_blank">Faux Bushes <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3RD3wE9" target="_blank">Garage Magnets <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4a7evff" target="_blank">Hanging Planters <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3PQd5iw" target="_blank">Faux Plants <span class="arrow">→</span></a>
       </div>
+    </div>
 
-      <!-- 3 -->
-      <div class="link-card">
-        <span class="emoji">🏡</span>
-        <div class="text">
-          <div class="label">Current Violation Count</div>
-          <span class="coming-soon">Coming Soon — TikTok</span>
-        </div>
-        <span class="arrow">→</span>
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-title">💡 Home Lighting — Maybe ARC Committee Approved, Maybe Not...</div>
+      <div class="links">
+        <a class="link-card" href="https://amzn.to/4ehTuRu" target="_blank">Permanent Lighting <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4uNkEpo" target="_blank">Spotlights <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3PVXopN" target="_blank">Tree Lights <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/439GM0U" target="_blank">Path Lights <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3RXSvND" target="_blank">Net Lights <span class="arrow">→</span></a>
       </div>
+    </div>
 
-      <!-- 4 -->
-      <div class="link-card">
-        <span class="emoji">📬</span>
-        <div class="text">
-          <div class="label">Send Me Your HOA Horror Stories</div>
-          <span class="coming-soon">Coming Soon</span>
-        </div>
-        <span class="arrow">→</span>
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-title">🎄 Other Super Large Holiday Decor the HOA Will Love</div>
+      <div class="links">
+        <a class="link-card" href="https://amzn.to/43a3KoD" target="_blank">Christmas <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3RZNunP" target="_blank">Valentine's Day <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4wXwsGV" target="_blank">St. Patrick's Day <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3RVExMg" target="_blank">Easter <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/438ZUME" target="_blank">Americana <span class="arrow">→</span></a>
       </div>
+    </div>
 
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="section-title">🎃 Celebrate Summerween in Style</div>
+      <div class="links">
+        <a class="link-card" href="https://amzn.to/4uaixL0" target="_blank">Plates & Napkins <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4voBpHj" target="_blank">Inflatable Coffin Cooler <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4dHp76V" target="_blank">Skull Ice Cube Mold <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4vhGwJ9" target="_blank">Party Decor <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/3RKzGgS" target="_blank">Inflatable Summer Skeleton <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4aon1qi" target="_blank">Coffin Letter Board <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <div class="section-title">🍹 So Many Violations... I Need a Cocktail</div>
+      <div class="links">
+        <a class="link-card" href="https://amzn.to/49B7vXU" target="_blank">Bartesian Cocktail Machine <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/49v7Hbg" target="_blank">Bat Wine Opener <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4e5fBcS" target="_blank">Skeleton Wine Glass <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4oceVXB" target="_blank">Skeleton Champagne Glass <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/49xcKrz" target="_blank">Skeleton Old Fashioned Glass <span class="arrow">→</span></a>
+        <a class="link-card" href="https://amzn.to/4x1OKab" target="_blank">Skeleton Martini Glass <span class="arrow">→</span></a>
+      </div>
     </div>
 
     <div class="divider"><span>🪦</span></div>
 
-    <footer class="footer">
-      The HOA has not approved this website.
+    <!-- Submit -->
+    <a class="submit-card" href="https://docs.google.com/forms/d/e/1FAIpQLSdzaZbuejOjPv-XLF_5sJrwjT-fD88CPVrOcvpDu3J5-Tqjvg/viewform?usp=publish-editor" target="_blank">
+      <span><span class="emoji">📬</span>Submit Your HOA Horror Story</span>
+      <span class="arrow">→</span>
+    </a>
+
+    <footer class="footer" style="margin-top: 32px;">
+      The HOA has not approved this website.<br><br>
+      Some links on this page are affiliate links. I may earn a small commission on purchases made through them — which goes directly toward funding my HOA violations. Worth it.
     </footer>
 
   </div>
